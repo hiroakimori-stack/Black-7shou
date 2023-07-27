@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* body */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    /* background-color: var(--bg-color); */
+    background-color: #E6E6E6;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--font-color);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    /* max-width: 100%; */
+    height: auto;
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--theme-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+/* admin */
+.admin-back {
+    background-color: #444349;
+    color: white;
+}
+
+.allitem_admin {
+    background-color: black;
+    width: 50%;
+    margin: 5% auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    color: white;
+}
+
+.insert-menu h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.insert-list {
+    margin: 3%;
+}
+
+.item-img {
+    width: 70px;
+}
+
+.allitem_admin h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.item-main {
+    margin: 3%;
+}
+
+.user-main {
+    margin: 3%;
+}
+
+.user-main th {
+    text-align: left;
+}
+
+.user-main td {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.edit {
+    min-width: 60px;
+}
+
+.edit a {
+    border-radius: 30px;
+    background-color: lightblue;
+    padding: 8px 11px;
+    color: #444349;
+    text-decoration: none;
+}
+
+.delete {
+    border-radius: 30px;
+    background-color: lightcoral;
+    padding: 4.5px 11px;
+    min-width: 60px;
+}
+
+.edit-image {
+    width: 180px;
+}

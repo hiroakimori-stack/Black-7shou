@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* header */
+
+.header {
+    padding-top: 60px;
+    height: 120px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    align-items: center;
+}
+
+.relative {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    z-index: 10;
+    align-items: center;
+}
+
+.header img {
+    height: 40px;
+    width: 50px;
+}
+
+.header-menu {
+    text-align: center;
+    display: flex;
+}
+
+.header-menu a {
+    color: rgb(100, 100, 100);
+    font-size: 20px;
+    text-decoration: none;
+    margin: 60px;
+    text-align: center;
+}
