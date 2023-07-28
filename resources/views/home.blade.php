@@ -43,7 +43,7 @@
                         <img src="{{  \Storage::url($item->image) }}" class="img1">
                     </a>
                     <h3>{{ $item->name }}</h3>
-                    <p>{{ $item->price }}</p>
+                    <p>{{ $item->price }}円</p>
                 </li>
                 @endforeach
             </ul>

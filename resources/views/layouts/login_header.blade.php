@@ -19,6 +19,7 @@
         <a class="header-list" href="index.php#about">ABOUT</a>
         <a class="header-list" href="index.php#items">ITEMS</a>
         <a class="header-list" href="{{ url('/contact') }}">CONTACT</a>
+        <a class="header-list" href="/user-profile">USER INFO</a>
         <a class="header-list" href="/logout">Logout</a>
     </div>
 </div>

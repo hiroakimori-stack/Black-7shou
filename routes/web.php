@@ -66,3 +66,5 @@ Route::post('update/{item}', [ItemController::class, 'updateConfirm'])->name('up
 
 // 商品購入
 Route::get('/item-buy/{item}', [ItemController::class, 'show'])->name('itembuy.show');
+
+Route::get('/user-profile', [App\Http\Controllers\UserController::class, 'userprofile'])->name('userprofile');
