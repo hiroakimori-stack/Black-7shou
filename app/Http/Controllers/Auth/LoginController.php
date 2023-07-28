@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -16,15 +17,13 @@ class LoginController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|string|unique:users2,email',
-            'password' => 'required|confirmed|string|min:4',
-            'type' => 'required'
+            'password' => 'required|confirmed|string|min:4'
         ]);
         
         $user = User::create([
             'name' => $request->name, 
             'email' => $request->email, 
-            'password' => $request->password,
-            'type' => $request->type,
+            'password' => Hash::make($request->password),
         ]);
 
         return view('auth/login');

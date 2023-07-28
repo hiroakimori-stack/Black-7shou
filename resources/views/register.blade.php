@@ -37,7 +37,7 @@
                     <input type="password" name="password_confirmation" class="form_contents">
                 </div>
 
-                <div>
+                <!-- <div>
                     <label for="type" class="content-text">属性</label>
                     <p class="error-text">{{ $errors->first('type') }}</p>
                     <select name="type" class="form_contents select-btn">
@@ -45,7 +45,7 @@
                         <option value="1">管理者</option>
                         <option value="2">一般ユーザー</option>
                     </select>
-                </div>
+                </div> -->
 
                 <div class="signup-btn">
                     <button type="submit" class="#">Signup</button>
