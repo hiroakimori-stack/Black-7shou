@@ -17,6 +17,7 @@
     <div class="header-menu">
         <a class="header-list" href="http://localhost/admin/item-index">管理画面トップ</a>
         <a class="header-list" href="/admin/item-insert">商品追加</a>
+        <a class="header-list" href="/admin/news-insert">ニュース登録</a>
         <a class="header-list" href="/profile">ユーザー情報</a>
         <a class="header-list" href="/logout">Logout</a>
     </div>

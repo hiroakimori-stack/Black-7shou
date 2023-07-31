@@ -31,6 +31,34 @@
                     @csrf
                     <td class="edit"><a href="{{ route('itemedit',$item->id) }}">変更</a></td>
                     <td><button type="submit" class="delete" onclick="return confirm('本当に削除しますか？')">削除</button></td>
+                    </form>
+                </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
+
+    <div class="itemindex-back">
+        <h2>ニュース一覧</h2>
+        <div class=item-main>
+            <table class="item-box">
+                <tr>
+                    <th>商品画像</th>    
+                    <th>見出し</th>
+                    <th>詳細</th>
+                    <th>変更</th>
+                    <th>削除</th>
+                </tr>
+                @foreach($newss as $news)
+                <tr class="border">
+                    <td><img class="item-img" src="{{  \Storage::url($news->image) }}"></td>
+                    <td>{{ $news->info }}</td>
+                    <td>{{ $news->detail }}</td>
+                    <form action="{{ route('newsdestroy',$news->id) }}" method="POST">
+                        @csrf
+                        <td class="edit"><a href="{{ route('newsedit',$news->id) }}">変更</a></td>
+                        <td><button type="submit" class="delete" onclick="return confirm('本当に削除しますか？')">削除</button></td>
+                    </form>
                 </tr>
                 @endforeach
             </table>

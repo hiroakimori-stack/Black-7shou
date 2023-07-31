@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\RepasswordController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +65,17 @@ Route::get('/admin/item-edit/{item}', [ItemController::class, 'edit'])->name('it
 Route::put('/admin/item-edit/{item}', [App\Http\Controllers\ItemController::class, 'update'])->name('itemupdate');
 Route::post('update/{item}', [ItemController::class, 'updateConfirm'])->name('update.confirm');
 
+//ニュース管理機能
+Route::get('/admin/news-insert', [NewsController::class, 'insert'])->name('news.insert');
+Route::post('/admin/news-insert', [NewsController::class, 'store'])->name('news.store');
+Route::post('/newsdestroy{id}', [NewsController::class, 'destroy'])->name('newsdestroy');
+Route::get('/admin/news-edit/{news}', [NewsController::class, 'edit'])->name('newsedit');
+Route::put('/admin/news-edit/{news}', [NewsController::class, 'newsupdate'])->name('news.update');
+
+// ユーザー情報
+Route::get('/user-profile', [App\Http\Controllers\UserController::class, 'userprofile'])->name('userprofile');
+
 // 商品購入
 Route::get('/item-buy/{item}', [ItemController::class, 'show'])->name('itembuy.show');
-
-Route::get('/user-profile', [App\Http\Controllers\UserController::class, 'userprofile'])->name('userprofile');
+Route::get('/cart', [UserController::class, 'show'])->name('cart.show');
+Route::post('/insert-cart', [App\Http\Controllers\UserController::class, 'insertCart'])->name('insertCart');

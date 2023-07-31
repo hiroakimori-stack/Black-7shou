@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreItemRequest;
 use App\Models\Item;
+use App\Models\News;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,12 +16,14 @@ class ItemController extends Controller{
     public function __construct()
     {
         $this->item = new Item();
+        $this->news = new News();
     }
 
     public function index()
     {
         $items = Item::all();
-        return view('/admin/item-index' ,compact('items'));
+        $newss = News::all();
+        return view('/admin/item-index' ,compact('items','newss'));
     }
 
     public function insert()
