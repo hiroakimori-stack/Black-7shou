@@ -79,3 +79,8 @@ Route::get('/user-profile', [App\Http\Controllers\UserController::class, 'userpr
 Route::get('/item-buy/{item}', [ItemController::class, 'show'])->name('itembuy.show');
 Route::get('/cart', [UserController::class, 'show'])->name('cart.show');
 Route::post('/insert-cart', [App\Http\Controllers\UserController::class, 'insertCart'])->name('insertCart');
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/user/item-all', [ItemController::class, 'itemall'])->name('item.all');
+    Route::get('/user/news-all', [HomeController::class, 'newsall'])->name('news.all');
+});

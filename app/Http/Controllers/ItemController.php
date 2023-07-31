@@ -19,6 +19,12 @@ class ItemController extends Controller{
         $this->news = new News();
     }
 
+    public function itemall()
+    {
+        $items = Item::all();
+        return view('/user/item-all' ,compact('items'));
+    }
+
     public function index()
     {
         $items = Item::all();

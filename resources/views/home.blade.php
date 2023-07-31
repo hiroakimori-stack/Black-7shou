@@ -5,7 +5,6 @@
         <title>Black</title>
         <link rel="stylesheet" type="text/css" href="/css/home.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
         <!-- Fonts -->
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -49,6 +48,21 @@
                 </li>
                 @endforeach
             </ul>
+            @auth()
+            <button class="other" onclick="location.href='/user/item-all'">
+                <a>More Items 
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </a>
+            </button>
+            @endauth
+
+            @guest
+            <button class="other" onclick="return confirm('ログインが必要です')">
+                <a>More Items 
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </a>
+            </button>
+            @endguest
         </div>
 
         <div class="news" id="news">
@@ -69,6 +83,21 @@
                 </li>
                 @endforeach
             </ul>
+            @auth()
+            <button class="other" onclick="location.href='/user/news-all'">
+                <a>More News 
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </a>
+            </button>
+            @endauth
+
+            @guest
+            <button class="other" onclick="return confirm('ログインが必要です')">
+                <a>More News 
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </a>
+            </button>
+            @endguest
         </div>
         @include('layouts.footer')
     </body>

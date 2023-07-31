@@ -36,9 +36,6 @@
                 </button>
             </div>
         </form>
-        <p class="notaccount">Don't have an account? <a href="http://localhost/index.php/register" class="signup-btn">
-                Signup
-                </a></p>
     </div>
 
     @include('layouts.footer')
