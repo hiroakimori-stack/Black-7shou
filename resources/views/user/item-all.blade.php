@@ -26,7 +26,15 @@
         <div class="advertisement">
         </div>
 
-        <div class="items" id="items">
+        <div class="items items-back" id="items">
+            <form class="search_container" method="get" action="{{ route('item.all') }}">
+            @csrf
+                <div class="form-group">
+                    <input type="search" class="form-control mr-sm-2" name="keyword"  value="" placeholder="キーワードを入力" aria-label="検索...">
+                </div>
+                <input type="submit" value="検索" class="btn btn-info">
+            </form>
+
             <h1>Items</h1>
             <ul class="item-box">
                 @foreach($items as $item)
@@ -39,6 +47,7 @@
                 </li>
                 @endforeach
             </ul>
+            {!! $items->links('pagination::default') !!}
         </div>
 
         @include('layouts.footer')

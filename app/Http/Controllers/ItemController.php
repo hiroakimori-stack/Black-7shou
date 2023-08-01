@@ -19,9 +19,27 @@ class ItemController extends Controller{
         $this->news = new News();
     }
 
-    public function itemall()
+    public function itemall(Request $request)
     {
         $items = Item::all();
+
+        #キーワード受け取り
+        $keyword = $request->input('keyword');
+        
+        #クエリ生成
+        $query = Item::query();
+        
+        #もしキーワードがあったら
+        if(!empty($keyword))
+        {
+            $query->where('name','like','%'.$keyword.'%');
+        }
+        
+        #ページネーション
+        $items = $query->paginate(3);
+        return view('/user/item-all')->with('items',$items)
+        ->with('keyword',$keyword);
+
         return view('/user/item-all' ,compact('items'));
     }
 
@@ -117,4 +135,6 @@ class ItemController extends Controller{
 
         return view('item-buy', compact('item'));
     }
+
+    
 }

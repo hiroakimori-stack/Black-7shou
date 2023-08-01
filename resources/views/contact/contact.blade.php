@@ -2,7 +2,13 @@
     <meta charset="UTF-8">
     <title>Black</title>
 </head>
-@include('layouts.notlogin_header')
+@auth()
+    @include('layouts.login_header')
+@endauth
+
+@guest
+    @include('layouts.notlogin_header')
+@endguest
 
 <body class="antialiased contact-back">
 

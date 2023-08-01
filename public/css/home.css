@@ -99,6 +99,46 @@ a {
     padding-bottom: 30px;
 }
 
+/* 
+ 検索機能
+*/
+
+.search_container {
+    box-sizing: border-box;
+    position: relative;
+    background-color: black;
+    border: 1px solid black;
+    padding: 3px 10px;
+    border-radius: 20px;
+    height: 3.3em;
+    width: 265px;
+    overflow: hidden;
+    margin-left: 70px;
+}
+
+.search_container input[type="text"] {
+    border: none;
+    height: 2.0em;
+}
+
+.search_container input[type="text"]:focus {
+    outline: 0;
+}
+
+.search_container input[type="submit"] {
+    cursor: pointer;
+    font-family: FontAwesome;
+    border: none;
+    background: black;
+    color: white;
+    position: absolute;
+    width: 3.5em;
+    height: 3.0em;
+    right: 0px;
+    top: -3px;
+    outline: none;
+}
+
 /* ページネーション */
 .paginationWrap {
     display: flex;
@@ -119,22 +159,22 @@ a {
 }
 
 .paginationWrap ul.pagination li a {
-    color: white;
+    color: black;
     padding: 8px 14px;
     text-decoration: none;
 }
 
 .paginationWrap ul.pagination li a.active {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border-radius: 40px;
     width: 38px;
     height: 38px;
 }
 
 .paginationWrap ul.pagination li a:hover:not(.active) {
-    background-color: #e1e7f0;
-    color: black;
+    background-color: black;
+    color: white;
     border-radius: 40px;
 }
 
@@ -152,8 +192,21 @@ a {
     padding-bottom: 20px;
 }
 
-.news h1 {
-    color: white;
+.news-back {
+    background-color: #E6E6E6;
+    color: black;
+    width: auto;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.news-txet {
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 3rem;
 }
 
 .news-list {
@@ -195,6 +248,7 @@ a {
 }
 
 /* items */
+
 .item-box li:nth-child(n+4) {
     display: none;
 }

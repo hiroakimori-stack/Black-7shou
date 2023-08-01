@@ -22,9 +22,9 @@
         @guest
             @include('layouts.notlogin_header')
         @endguest
-        
-        <div class="news" id="news">
-            <h1>News</h1>
+
+        <div class="newsback" id="news">
+            <h1 class="news-txet">News</h1>
             <ul class="news-list list-group">
                 @foreach($newss as $news)
                 <li class="news_list_item list-group-item">
