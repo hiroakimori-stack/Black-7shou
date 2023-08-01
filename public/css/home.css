@@ -214,6 +214,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    font-size: 1.5rem;
 }
 
 .news-list li:nth-child(n+4) {

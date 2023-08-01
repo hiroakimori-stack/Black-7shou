@@ -17,8 +17,8 @@
     <a href="/"><img src="http://localhost/img/logo.png"></a>
     <div class="header-menu">
         <a class="header-list" href="http://localhost/index.php">HOME</a>
-        <a class="header-list" href="index.php#about">ABOUT</a>
-        <a class="header-list" href="index.php#items">ITEMS</a>
+        <a class="header-list" href="http://localhost/index.php#about">ABOUT</a>
+        <a class="header-list" href="http://localhost/index.php#items">ITEMS</a>
         <a class="header-list" href="{{ url('/contact') }}">CONTACT</a>
         <a class="header-list" href="/user-profile">USER INFO</a>
         <a href="#"><i class="fas fa-duotone fa-cart-shopping" style="--fa-primary-color: #e4e4e7; --fa-secondary-color: #ffffff;"></i><p style="font-size:5px;">CART</p></a>

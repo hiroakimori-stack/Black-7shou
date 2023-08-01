@@ -47,6 +47,7 @@ class ItemController extends Controller{
     {
         $items = Item::all();
         $newss = News::all();
+
         return view('/admin/item-index' ,compact('items','newss'));
     }
 
@@ -107,8 +108,9 @@ class ItemController extends Controller{
         $item->update($request->all());
     
         $items = Item::all();
-    
-        return view('/admin/item-index' ,compact('items'));
+        $newss = News::all();
+
+        return view('/admin/item-index' ,compact('items','newss'));
     }
 
     public function updateConfirm(Request $request, Item $item)
